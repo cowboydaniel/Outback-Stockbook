@@ -196,7 +196,7 @@ class TreatmentsView(BaseView):
         info = QLabel(
             "These animals must not be sold for slaughter until their withholding period ends."
         )
-        info.setStyleSheet("color: #7f8c8d; margin-bottom: 10px;")
+        info.setStyleSheet("color: #2c3e50; margin-bottom: 10px;")
         layout.addWidget(info)
 
         # WHP table

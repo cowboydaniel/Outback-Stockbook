@@ -200,7 +200,7 @@ def get_stylesheet() -> str:
 
         QLabel#subtitleLabel {
             font-size: 16px;
-            color: #7f8c8d;
+            color: #2c3e50;
         }
 
         /* Group boxes */

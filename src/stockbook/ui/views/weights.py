@@ -145,7 +145,7 @@ class WeightsView(BaseView):
         layout.setSpacing(2)
 
         title_label = QLabel(title)
-        title_label.setStyleSheet("color: #7f8c8d; font-size: 11px;")
+        title_label.setStyleSheet("color: #2c3e50; font-size: 11px;")
         layout.addWidget(title_label)
 
         value_label = QLabel(value)

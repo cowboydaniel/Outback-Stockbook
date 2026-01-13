@@ -166,7 +166,7 @@ class ReportsView(BaseView):
 
         desc_label = QLabel(description)
         desc_label.setWordWrap(True)
-        desc_label.setStyleSheet("color: #7f8c8d; font-size: 12px;")
+        desc_label.setStyleSheet("color: #2c3e50; font-size: 12px;")
         layout.addWidget(desc_label)
 
         layout.addStretch()

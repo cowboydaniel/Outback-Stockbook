@@ -107,7 +107,7 @@ class DashboardView(BaseView):
         layout.setContentsMargins(15, 15, 15, 15)
 
         title_label = QLabel(title)
-        title_label.setStyleSheet("color: #7f8c8d; font-size: 12px; font-weight: bold;")
+        title_label.setStyleSheet("color: #2c3e50; font-size: 12px; font-weight: bold;")
         layout.addWidget(title_label)
 
         value_label = QLabel(value)
@@ -228,7 +228,7 @@ class DashboardView(BaseView):
 
         # Empty state
         self.events_empty = QLabel("No recent activity - start by adding animals or paddocks")
-        self.events_empty.setStyleSheet("color: #7f8c8d; font-style: italic; padding: 20px;")
+        self.events_empty.setStyleSheet("color: #2c3e50; font-style: italic; padding: 20px;")
         self.events_empty.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.events_empty.hide()
         layout.addWidget(self.events_empty)
@@ -350,7 +350,7 @@ class DashboardView(BaseView):
 
         if task.due_date:
             due = QLabel(f"Due: {task.due_date}")
-            due.setStyleSheet("color: #7f8c8d; font-size: 11px;")
+            due.setStyleSheet("color: #2c3e50; font-size: 11px;")
             info_layout.addWidget(due)
 
         layout.addLayout(info_layout)
