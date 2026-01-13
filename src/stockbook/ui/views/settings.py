@@ -106,7 +106,7 @@ class SettingsView(BaseView):
             "and before any major changes."
         )
         backup_info.setWordWrap(True)
-        backup_info.setStyleSheet("color: #7f8c8d;")
+        backup_info.setStyleSheet("color: #2c3e50;")
         layout.addWidget(backup_info)
 
         backup_row = QHBoxLayout()
@@ -126,7 +126,7 @@ class SettingsView(BaseView):
 
         # Last backup info
         self.last_backup_label = QLabel("Last backup: Never")
-        self.last_backup_label.setStyleSheet("color: #7f8c8d; margin-top: 10px;")
+        self.last_backup_label.setStyleSheet("color: #2c3e50; margin-top: 10px;")
         layout.addWidget(self.last_backup_label)
 
         return group
