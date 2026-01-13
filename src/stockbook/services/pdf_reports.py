@@ -41,7 +41,7 @@ class ReportGenerator:
                 name="ReportSubtitle",
                 parent=self.styles["Normal"],
                 fontSize=10,
-                textColor=colors.grey,
+                textColor=colors.black,
                 spaceAfter=20,
             )
         )

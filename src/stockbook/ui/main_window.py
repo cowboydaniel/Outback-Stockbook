@@ -78,7 +78,7 @@ class MainWindow(QMainWindow):
         title_layout.addWidget(title)
 
         subtitle = QLabel("Stockbook")
-        subtitle.setStyleSheet("color: #3498db; font-size: 18px; font-weight: bold;")
+        subtitle.setStyleSheet("color: #ffffff; font-size: 18px; font-weight: bold;")
         title_layout.addWidget(subtitle)
 
         layout.addWidget(title_container)
@@ -114,7 +114,7 @@ class MainWindow(QMainWindow):
 
         # Version info at bottom
         version_label = QLabel(f"v{__version__}")
-        version_label.setStyleSheet("color: #7f8c8d; padding: 10px;")
+        version_label.setStyleSheet("color: #ffffff; padding: 10px;")
         version_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(version_label)
 
