@@ -107,11 +107,11 @@ class DashboardView(BaseView):
         layout.setContentsMargins(15, 15, 15, 15)
 
         title_label = QLabel(title)
-        title_label.setStyleSheet("color: #2c3e50; font-size: 12px; font-weight: bold;")
+        title_label.setStyleSheet("color: #000000; font-size: 12px; font-weight: bold;")
         layout.addWidget(title_label)
 
         value_label = QLabel(value)
-        value_label.setStyleSheet(f"color: {color}; font-size: 32px; font-weight: bold;")
+        value_label.setStyleSheet("color: #000000; font-size: 32px; font-weight: bold;")
         layout.addWidget(value_label)
 
         return {"widget": card, "value_label": value_label, "title_label": title_label}
@@ -142,7 +142,7 @@ class DashboardView(BaseView):
 
         # Header
         header = QLabel("Animals on Withholding Period")
-        header.setStyleSheet("font-size: 16px; font-weight: bold; color: #e74c3c;")
+        header.setStyleSheet("font-size: 16px; font-weight: bold; color: #000000;")
         layout.addWidget(header)
 
         # Table for WHP animals
@@ -157,7 +157,7 @@ class DashboardView(BaseView):
 
         # Empty state label
         self.whp_empty = QLabel("No animals currently on withholding period")
-        self.whp_empty.setStyleSheet("color: #27ae60; font-style: italic; padding: 20px;")
+        self.whp_empty.setStyleSheet("color: #000000; font-style: italic; padding: 20px;")
         self.whp_empty.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.whp_empty.hide()
         layout.addWidget(self.whp_empty)
@@ -173,7 +173,7 @@ class DashboardView(BaseView):
         # Header with action button
         header_row = QHBoxLayout()
         header = QLabel("Tasks Due (Next 7 Days)")
-        header.setStyleSheet("font-size: 16px; font-weight: bold; color: #f39c12;")
+        header.setStyleSheet("font-size: 16px; font-weight: bold; color: #000000;")
         header_row.addWidget(header)
         header_row.addStretch()
         layout.addLayout(header_row)
@@ -184,7 +184,7 @@ class DashboardView(BaseView):
 
         # Empty state
         self.tasks_empty = QLabel("No tasks due - you're all caught up!")
-        self.tasks_empty.setStyleSheet("color: #27ae60; font-style: italic; padding: 20px;")
+        self.tasks_empty.setStyleSheet("color: #000000; font-style: italic; padding: 20px;")
         self.tasks_empty.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.tasks_empty.hide()
         layout.addWidget(self.tasks_empty)
@@ -213,7 +213,7 @@ class DashboardView(BaseView):
 
         # Header
         header = QLabel("Recent Activity")
-        header.setStyleSheet("font-size: 16px; font-weight: bold; color: #3498db;")
+        header.setStyleSheet("font-size: 16px; font-weight: bold; color: #000000;")
         layout.addWidget(header)
 
         # Events table
@@ -228,7 +228,7 @@ class DashboardView(BaseView):
 
         # Empty state
         self.events_empty = QLabel("No recent activity - start by adding animals or paddocks")
-        self.events_empty.setStyleSheet("color: #2c3e50; font-style: italic; padding: 20px;")
+        self.events_empty.setStyleSheet("color: #000000; font-style: italic; padding: 20px;")
         self.events_empty.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.events_empty.hide()
         layout.addWidget(self.events_empty)
@@ -350,7 +350,7 @@ class DashboardView(BaseView):
 
         if task.due_date:
             due = QLabel(f"Due: {task.due_date}")
-            due.setStyleSheet("color: #2c3e50; font-size: 11px;")
+            due.setStyleSheet("color: #000000; font-size: 11px;")
             info_layout.addWidget(due)
 
         layout.addLayout(info_layout)

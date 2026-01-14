@@ -247,10 +247,10 @@ class AnimalsView(BaseView):
 
             status_item = QTableWidgetItem(animal.status.value.title())
             if animal.status == AnimalStatus.DEAD:
-                status_item.setBackground(Qt.GlobalColor.darkGray)
+                status_item.setBackground(Qt.GlobalColor.black)
                 status_item.setForeground(Qt.GlobalColor.white)
             elif animal.status == AnimalStatus.SOLD:
-                status_item.setBackground(Qt.GlobalColor.darkGreen)
+                status_item.setBackground(Qt.GlobalColor.black)
                 status_item.setForeground(Qt.GlobalColor.white)
             self.table.setItem(row, 7, status_item)
 

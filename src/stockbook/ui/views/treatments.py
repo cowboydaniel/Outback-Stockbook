@@ -190,13 +190,13 @@ class TreatmentsView(BaseView):
 
         # Header
         header = QLabel("Animals Currently on Withholding Period")
-        header.setStyleSheet("font-size: 18px; font-weight: bold; color: #e74c3c;")
+        header.setStyleSheet("font-size: 18px; font-weight: bold; color: #000000;")
         layout.addWidget(header)
 
         info = QLabel(
             "These animals must not be sold for slaughter until their withholding period ends."
         )
-        info.setStyleSheet("color: #2c3e50; margin-bottom: 10px;")
+        info.setStyleSheet("color: #000000; margin-bottom: 10px;")
         layout.addWidget(info)
 
         # WHP table
@@ -214,7 +214,7 @@ class TreatmentsView(BaseView):
         # Empty state
         self.whp_empty = QLabel("No animals currently on withholding period - all clear!")
         self.whp_empty.setStyleSheet(
-            "color: #27ae60; font-size: 16px; font-style: italic; padding: 40px;"
+            "color: #000000; font-size: 16px; font-style: italic; padding: 40px;"
         )
         self.whp_empty.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.whp_empty.hide()

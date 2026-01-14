@@ -161,12 +161,12 @@ class ReportsView(BaseView):
         layout = QVBoxLayout(card)
 
         title_label = QLabel(title)
-        title_label.setStyleSheet("font-size: 16px; font-weight: bold; color: #2c3e50;")
+        title_label.setStyleSheet("font-size: 16px; font-weight: bold; color: #000000;")
         layout.addWidget(title_label)
 
         desc_label = QLabel(description)
         desc_label.setWordWrap(True)
-        desc_label.setStyleSheet("color: #2c3e50; font-size: 12px;")
+        desc_label.setStyleSheet("color: #000000; font-size: 12px;")
         layout.addWidget(desc_label)
 
         layout.addStretch()

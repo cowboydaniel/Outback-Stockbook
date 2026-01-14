@@ -139,7 +139,7 @@ class QuickTreatmentDialog(QDialog):
 
         # WHP info
         self.whp_label = QLabel("")
-        self.whp_label.setStyleSheet("color: #e74c3c; font-weight: bold;")
+        self.whp_label.setStyleSheet("color: #000000; font-weight: bold;")
         layout.addWidget(self.whp_label)
 
         # Notes

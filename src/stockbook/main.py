@@ -75,7 +75,7 @@ def get_stylesheet() -> str:
 
         #sidebar QPushButton {
             background-color: transparent;
-            color: #ecf0f1;
+            color: #ffffff;
             border: none;
             padding: 15px 20px;
             text-align: left;
@@ -189,18 +189,18 @@ def get_stylesheet() -> str:
         /* Labels */
         QLabel {
             font-size: 13px;
-            color: #2c3e50;
+            color: #000000;
         }
 
         QLabel#titleLabel {
             font-size: 24px;
             font-weight: bold;
-            color: #2c3e50;
+            color: #000000;
         }
 
         QLabel#subtitleLabel {
             font-size: 16px;
-            color: #2c3e50;
+            color: #000000;
         }
 
         /* Group boxes */
