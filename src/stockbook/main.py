@@ -10,7 +10,7 @@ if str(_src_dir) not in sys.path:
 
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
+from PySide6.QtGui import QFont, QPalette, QColor
 
 from stockbook import __app_name__, __version__
 from stockbook.models.database import Database
@@ -33,6 +33,14 @@ def main():
     font = app.font()
     font.setPointSize(10)
     app.setFont(font)
+
+    # Set palette for placeholder text to be black
+    palette = app.palette()
+    palette.setColor(QPalette.ColorRole.PlaceholderText, QColor("#000000"))
+    palette.setColor(QPalette.ColorRole.Text, QColor("#000000"))
+    palette.setColor(QPalette.ColorRole.WindowText, QColor("#000000"))
+    palette.setColor(QPalette.ColorRole.ButtonText, QColor("#000000"))
+    app.setPalette(palette)
 
     # Apply dark-friendly stylesheet for outdoor visibility
     app.setStyleSheet(get_stylesheet())
@@ -99,6 +107,7 @@ def get_stylesheet() -> str:
         /* Tables - high visibility */
         QTableWidget, QTableView {
             background-color: #ffffff;
+            color: #000000;
             alternate-background-color: #f8f9fa;
             gridline-color: #dee2e6;
             font-size: 13px;
@@ -108,6 +117,7 @@ def get_stylesheet() -> str:
 
         QTableWidget::item, QTableView::item {
             padding: 8px;
+            color: #000000;
         }
 
         QHeaderView::section {
@@ -164,6 +174,7 @@ def get_stylesheet() -> str:
         QLineEdit, QTextEdit, QPlainTextEdit, QSpinBox, QDoubleSpinBox,
         QDateEdit, QComboBox {
             background-color: #ffffff;
+            color: #000000;
             border: 2px solid #bdc3c7;
             border-radius: 4px;
             padding: 10px;
@@ -176,6 +187,11 @@ def get_stylesheet() -> str:
             border-color: #3498db;
         }
 
+        /* Placeholder text */
+        QLineEdit[text=""], QLineEdit:placeholder {
+            color: #000000;
+        }
+
         QComboBox::drop-down {
             border: none;
             width: 30px;
@@ -184,6 +200,14 @@ def get_stylesheet() -> str:
         QComboBox::down-arrow {
             width: 12px;
             height: 12px;
+        }
+
+        /* Dropdown list items */
+        QComboBox QAbstractItemView {
+            background-color: #ffffff;
+            color: #000000;
+            selection-background-color: #3498db;
+            selection-color: #ffffff;
         }
 
         /* Labels */
@@ -207,6 +231,7 @@ def get_stylesheet() -> str:
         QGroupBox {
             font-weight: bold;
             font-size: 14px;
+            color: #000000;
             border: 2px solid #bdc3c7;
             border-radius: 4px;
             margin-top: 10px;
@@ -217,11 +242,13 @@ def get_stylesheet() -> str:
             subcontrol-origin: margin;
             left: 10px;
             padding: 0 5px;
+            color: #000000;
         }
 
         /* Search bar */
         #searchBar {
             background-color: #ffffff;
+            color: #000000;
             border: 2px solid #3498db;
             border-radius: 20px;
             padding: 10px 20px;
@@ -300,6 +327,7 @@ def get_stylesheet() -> str:
 
         QTabBar::tab {
             background-color: #ecf0f1;
+            color: #000000;
             padding: 12px 24px;
             font-size: 13px;
             font-weight: bold;
@@ -312,6 +340,7 @@ def get_stylesheet() -> str:
 
         QTabBar::tab:hover:!selected {
             background-color: #bdc3c7;
+            color: #000000;
         }
 
         /* Cards / Frames */
